@@ -14,22 +14,15 @@ happened, or was first reported, on that day.
 
 - **Date-forward masthead** — "Saturday 21 November 2026" as the giant
   serif headline, front and centre.
-- **Lead stories** — Russian missiles land in Poland; Wall Street enters
-  correction as the AI rout deepens; Cyclone Akvan crosses the Odisha
-  coast.
-- **33 stories from 5 regions** — Asia-Pacific 9, Europe 8, Middle
-  East 2, Americas 11, Worldwide 3.
-- **The day by hours** — seven time-anchored events as reported.
-- **Twelve more stories** in three columns — the overnight Kyiv
-  bombardment, Trump's January peace-deal push, GTA 6's $3.79bn day,
-  the JPMorgan/Visa/Mastercard vendor breach, the NSE's rise to 5th
-  largest, India's Wellington fightback, YouTube's $3bn school
-  settlement, Indonesia's $30bn fires, the EU's EUR 1bn Ukraine aid,
-  the UK's drone pledge, the Hormuz tanker mines, and Medvedev's ATP
-  Finals win.
-- **Where it happened** — a world map with six numbered pins, an
-  18-item "Also on this page" list, a verdict box, markets, a date-check
-  box naming what was deliberately left off, and a sources line.
+- **Lead stories** — a 6.8 quake shakes Peru; Wall Street slides into
+  correction at Friday's close; Russian missiles come down in Poland.
+- **30 stories** — three leads plus 27 more, from BepiColombo's arrival
+  at Mercury to Saturday's football across Europe.
+- **The day by hours** — six time-anchored events, from the 00:09 quake
+  to the Dragon splashdown at 21:55 UTC.
+- **Where it happened** — a world map with eight numbered pins, a
+  verdict box, markets, a date-check box naming what was deliberately
+  left off, and a sources line.
 
 ## How it is made
 
@@ -45,8 +38,7 @@ python3 main.py          # copies entry.png to /output/entry.png
 
 ## How sure are we?
 
-Every story carries a REPORTED / CLAIM / FORECAST tag: REPORTED means
-confirmed by named sources, CLAIM means one side says it and it is
-unverified, FORECAST means a schedule or a projection. The date-check box
-lists the big headlines that are not 21 November's news and were left off
-on purpose.
+Every story on the page happened, or was first reported, on Saturday
+21 November 2026 — except Friday's market close, which is labelled as
+Friday's. The date-check box lists the big headlines that are not
+21 November's news and were left off on purpose.

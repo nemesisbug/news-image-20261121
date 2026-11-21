@@ -2,7 +2,7 @@
 """Render one newspaper front page summing up Saturday 21 November 2026.
 
 Everything here is authored in this session: the story list was researched
-from public reporting on the morning of 21 Nov 2026 (03:30 UTC), and the
+from public reporting on the morning of 21 Nov 2026 (03:55 UTC), and the
 drawing code is an original, data-driven layout. Output is deterministic:
 no clock, no randomness, fixed palette and fonts, so re-running the script
 reproduces the same PNG bytes.
@@ -72,60 +72,60 @@ LEAD_ITEMS = [
 ]
 
 GRID_ITEMS = [
-    ("WAR", "Kryvyi Rih, Ukraine", "Missiles kill a child and a paramedic",
-     "A double-tap ballistic strike killed 2 and hurt 42, four of them children."),
-    ("DIPLOMACY", "Shenzhen, China", "Trump, Xi and Putin meet, few results",
-     "The first three-way summit ended with warm words, a pledge on human control of military AI, and little concrete."),
-    ("JUSTICE", "The Hague", "World Court: Myanmar committed genocide",
-     "The ICJ ruled state forces committed genocide against the Rohingya."),
-    ("EUROPE", "Brussels", "UK and EU sign food, carbon and youth deals",
-     "Three agreements were signed at a Brussels summit led by PM Andy Burnham."),
-    ("GAZA", "Gaza", "Four nations demand aid reach flooded Gaza",
-     "Australia, Canada, Italy and the UK called for immediate, unrestricted access."),
-    ("ESPIONAGE", "Copenhagen", "Denmark expels Russian diplomat",
-     "Police say they foiled a plot to kill Ukrainian rapper Kyivstoner before a concert."),
-    ("BORDERS", "Tallinn", "Estonia shuts its crossings to Russia",
-     "The shutdown followed suspected arson sabotage at a drone maker."),
-    ("AID", "Brussels", "EU approves EUR 1bn in arms aid for Kyiv",
-     "The UK also pledged 1,000-plus drones in a GBP 260m package."),
-    ("WASHINGTON", "Washington", "Senate rejects Iran war-powers curb, 51-48",
-     "The vote leaves the president free as he weighs renewed strikes on Iran."),
-    ("SANCTIONS", "Washington", "US blacklists four Iranians over oil cash",
-     "Treasury also sanctioned the Comancheros and the 'Ndrangheta."),
+    ("AFTERMATH", "Junin", "Peru counts the damage after the quake",
+     "Civil defence teams fan out across four regions; rockfalls block the central highway; no deaths reported."),
+    ("NATO", "Warsaw", "NATO chief heads to Warsaw",
+     "Rutte visits Poland on Saturday after the missile incursion; Warsaw wants more AWACS cover."),
+    ("SPACE", "Mercury", "BepiColombo reaches Mercury at last",
+     "After eight years and six billion miles, the European-Japanese probe fires its engines to enter orbit."),
+    ("DIPLOMACY", "New Delhi", "SCO forum opens its Saturday sessions",
+     "Four themed sessions run in Delhi over the weekend; Pakistan's climate minister leads its delegation."),
+    ("INDIA", "Kharagpur", "Modi marks 75 years of IIT Kharagpur",
+     "The PM opens a three-state tour at the institute's platinum jubilee, then heads to Bihar and Lucknow."),
+    ("INDIA", "Itanagar", "Arunachal police take the President's Colour",
+     "Home Minister Shah presents the honour at Banderdewa, then reviews development projects in Itanagar."),
+    ("DIPLOMACY", "New Delhi", "Jaishankar meets Bulgaria's foreign minister",
+     "Petrova-Chamova, in Delhi for three days, holds talks at Hyderabad House on trade and technology."),
+    ("WEATHER", "Telangana", "Akvan's rain lingers over Telangana",
+     "Orange alerts stand for four districts on Saturday as the weakened storm drifts inland."),
+    ("WEATHER", "South Pacific", "Cyclone Xavier stirs the South Pacific",
+     "Gale warnings stand for Cook Islands atolls as the 45-knot storm tracks west-southwest near Samoa."),
+    ("MARKETS", "Mumbai", "Sensex hits a nine-month high",
+     "Friday's close: the index rose 898 points to 83,920, its best finish in nine months."),
+    ("CRYPTO", "Markets", "Bitcoin slips under $59,000",
+     "$1.91bn of leveraged bets were wiped out in a day as the sell-off swept through crypto markets."),
     ("GULF", "Riyadh", "Houthi missiles over Riyadh intercepted",
-     "The Saudi-led coalition said it downed three missiles and struck Hodeidah."),
-    ("CLIMATE", "Antalya", "COP31 ends its final day with no deal",
-     "Talks ran overnight toward a third draft after fossil-fuel wording was cut."),
-    ("INDIA", "Mumbai", "Foreign cash floods Indian shares: record",
-     "A net Rs 1.22 lakh crore flowed in between 2 and 20 November, an all-time high."),
-    ("NEPAL", "New Delhi", "Nepal's PM begins first trip abroad in Delhi",
-     "Balendra Shah arrived for a two-day state visit, his first since March."),
-    ("NEW YORK", "New York", "Mamdani sets 2032 to close Rikers Island",
-     "The mayor's plan replaces the 2027 legal deadline with a 2032 target."),
+     "The coalition said it downed three missiles aimed at the capital on Saturday, the second attack in days."),
+    ("CLIMATE", "Antalya", "COP31 talks run past the deadline",
+     "Talks ran into overtime on a third draft after fossil-fuel wording was cut; Panama threatened a veto."),
+    ("FRANCE", "Paris", "Fourth weekend of cost-of-living protests",
+     "Some 146,000 marched across France, 46,000 in Paris, as price protests entered a fourth weekend."),
+    ("SPACE", "Vandenberg", "SpaceX tries again to fly USSF-317",
+     "Thursday's launch was scrubbed; the classified Space Force mission is now set for 04:20 UTC on Saturday."),
+    ("SPACE", "California", "Dragon splashes down off California",
+     "The cargo capsule brings 6,300 lb of science home from the space station on Saturday afternoon."),
+    ("AUTO SHOW", "Los Angeles", "LA Auto Show opens its first Saturday",
+     "A benefit concert and celebrity guests fill the first weekend; the show runs to 29 November."),
     ("CRICKET", "Wellington", "Rahul completes the SENA century set",
      "His 100 off 207 balls made him the first Indian opener with Test tons in all four SENA lands."),
-    ("FOOTBALL", "Munich", "Kane tears ankle ligament, out for months",
-     "Bayern's striker was hurt in Friday's 1-1 draw with Cologne."),
-    ("NFL", "Houston", "Texans flatten the Colts, 26-3",
-     "A dominant defence kept Houston's playoff hopes alive on Thursday night."),
-    ("BASEBALL", "Washington", "Trump pardons Pete Rose posthumously",
-     "The late baseball star was pardoned by the president on Friday."),
-    ("LAW", "Los Angeles", "Man convicted of starting Palisades Fire",
-     "A jury found Jonathan Rinderknecht guilty of igniting the blaze."),
-    ("ENERGY", "Washington", "US details $12bn in Venezuelan oil revenue",
-     "A 53-page State Department report tracks the money, nearly a year after Maduro's capture."),
-    ("ISRAEL", "Jerusalem", "Eisenkot tapped to form next government",
-     "President Herzog chose the ex-army chief over PM Netanyahu."),
-    ("FRANCE", "Paris", "Fourth weekend of cost-of-living protests",
-     "Demonstrations spread across France over rising prices."),
-    ("SHIPPING", "Strait of Hormuz", "Tanker struck and on fire off Oman",
-     "UKMTO reported the incident eight nautical miles north of Khasab."),
-    ("TECH", "Washington", "US warns tech firms over offshore data centres",
-     "US tech firms building abroad face 'tremendous penalties', he warned."),
-    ("ASIA", "Pyongyang", "Satellites show N. Korea uranium plant growing",
-     "Imagery points to an expansion of the enrichment site."),
-    ("ARGENTINA", "Buenos Aires", "Senate backs disability law, 71-0",
-     "The permanent framework passed unanimously on 20 November."),
+    ("F1", "Las Vegas", "Vegas qualifying under the lights",
+     "Russell led final practice; Antonelli, the new champion, carries a five-place grid penalty into qualifying."),
+    ("FOOTBALL", "England", "Seven Premier League games on Saturday",
+     "City host Fulham at lunchtime and Newcastle meet Arsenal in the late game as the title race resumes."),
+    ("FOOTBALL", "Germany", "Dortmund chase the Bundesliga summit",
+     "The unbeaten visitors travel to Gladbach, one of six Saturday games, with the top spot in reach."),
+    ("FOOTBALL", "Spain", "Madrid host Celta in the late game",
+     "The Seville derby opens the evening; Real trail Barcelona by three points before Sunday's test."),
+    ("FOOTBALL", "Italy", "Lazio defend top spot at home",
+     "The leaders host Lecce while Napoli meet Torino under the lights as the twelfth round begins."),
+    ("FOOTBALL", "France", "PSG chase an eighth straight win",
+     "The leaders travel to Nice, who have won three in a row; Lille meet Lyon in the evening games."),
+    ("COLLEGE FOOTBALL", "United States", "College football's big Saturday",
+     "Texas A&M visit Oklahoma and Notre Dame host SMU as the playoff race hits its final stretch."),
+    ("NHL", "North America", "Fourteen NHL games on Saturday",
+     "The streaking Wild visit Vancouver and the Oilers meet the Hurricanes as the league plays a full slate."),
+    ("NBA", "Charlotte", "Hawks beat Hornets 111-97",
+     "Atlanta beat Charlotte 111-97 in the early game as Saturday's NBA slate got under way."),
 ]
 
 # (utc time, label) — times approximate, UTC.
@@ -133,9 +133,9 @@ DAY_TIMELINE = [
     ("00:09", "Peru quake strikes Junin, felt in Lima"),
     ("01:30", "Russian missiles confirmed down in Poland"),
     ("07:00", "Rahul reaches his hundred in Wellington"),
-    ("12:00", "UK-EU deals signed in Brussels"),
-    ("16:00", "ICJ genocide ruling read in The Hague"),
-    ("21:00", "Wall Street closes; COP31 talks run on"),
+    ("13:00", "Paris march sets off from Republique"),
+    ("18:24", "BepiColombo fires into Mercury orbit"),
+    ("21:55", "Dragon splashes down off California"),
 ]
 
 MARKET_ROWS = [
@@ -151,26 +151,26 @@ STAT_CELLS = [
     ("30", "verified stories"),
     ("6.8", "Peru quake magnitude"),
     ("-5.28%", "Nasdaq, Friday"),
-    ("51-48", "Senate Iran vote"),
-    ("2 dead, 42 hurt", "Kryvyi Rih strike"),
+    ("$1.91bn", "crypto bets wiped out"),
+    ("146,000", "march in France"),
 ]
 
 # Numbered pins on the schematic map: (x, y, number, label).
 MAP_PINS = [
     (120, 50, "1", "Lima"),
-    (205, 28, "2", "New York"),
+    (212, 24, "2", "New York"),
     (425, 20, "3", ""),
     (412, 38, "4", ""),
-    (520, 34, "5", "Shenzhen"),
-    (400, 52, "6", ""),
+    (150, 40, "5", "Las Vegas"),
+    (495, 48, "6", "Delhi"),
     (455, 60, "7", "Riyadh"),
     (575, 70, "8", "Wellington"),
 ]
 
 LEFT_OFF = [
-    "Homo erectus fossils in China (Nature papers, 18 Nov) - older than today.",
-    "Crimean Bridge strikes of 19 Nov - superseded by the 20 Nov strikes.",
-    "Anthropic's IPO debut (19-20 Nov) - folded into the markets story.",
+    "ICJ genocide ruling (19 Nov), Shenzhen summit (19 Nov), Senate Iran vote 51-48 (19 Nov) - all Thursday, not today.",
+    "Texans-Colts (Thu night), Rose pardon (Fri), Kane injury (Fri) - filed, not front-page news today.",
+    "Homo erectus fossils in China (18 Nov), Crimean Bridge strikes (19 Nov), Anthropic IPO (19-20 Nov) - older than today.",
 ]
 
 
@@ -245,7 +245,7 @@ class FrontPage:
         headline = "Saturday 21 November 2026"
         pen.text((EDGE, top + 36), headline,
                  font=set_.font(SERIF_BOLD, 46), fill=INK)
-        sub = "Thirty verified stories from overnight and Friday - quake, correction, missiles and a court ruling that made history."
+        sub = "Thirty verified stories from Saturday - a quake at dawn, missiles overnight, protests in Paris and a probe that reached Mercury."
         for i, line in enumerate(set_.wrap(sub, SANS, 13, INNER_W)):
             pen.text((EDGE, top + 96 + i * 17), line,
                      font=set_.font(SANS, 13), fill=SOFT_INK)
@@ -377,7 +377,7 @@ class FrontPage:
                 lx = EDGE + px - 11 - label_w
             pen.text((lx, y + py - 5), label,
                      font=set_.font(SANS_BOLD, 9), fill=INK)
-        key = "1 Lima  2 New York  3 Kyiv  4 Warsaw  5 Shenzhen  6 The Hague  7 Riyadh  8 Wellington"
+        key = "1 Lima  2 New York  3 Kyiv  4 Warsaw  5 Las Vegas  6 Delhi  7 Riyadh  8 Wellington"
         pen.text((EDGE + 10, y + map_h - 14), key,
                  font=set_.font(SANS, 9), fill=SOFT_INK)
 
@@ -386,8 +386,8 @@ class FrontPage:
         pen.rectangle([vx, y, vx + vw, y + map_h], fill=(22, 22, 22))
         pen.text((vx + 12, y + 8), "THE DAY IN ONE LINE",
                  font=set_.font(SANS_BOLD, 10), fill=(232, 200, 120))
-        verdict = ("A trembling earth, a tumbling market and missiles over "
-                   "a NATO border - one Friday that shook three continents.")
+        verdict = ("A quake at dawn, missiles over a NATO border, a probe "
+                   "at Mercury - one Saturday, three continents.")
         for i, line in enumerate(set_.wrap(verdict, SERIF, 12, vw - 24)):
             pen.text((vx + 12, y + 26 + i * 16), line,
                      font=set_.font(SERIF, 12), fill=(247, 243, 234))
@@ -428,8 +428,8 @@ class FrontPage:
     def paint_footer(self, y: int) -> None:
         pen, set_ = self.pen, self.set
         draw_rule(pen, EDGE, y, CANVAS_W - EDGE, 2)
-        foot = ("Sources, 21 Nov 2026 03:30 UTC: Reuters, AP, IANS, "
-                "InvestingLive, USGS / Peru IGP, ICJ, EU Council, UKMTO. "
+        foot = ("Sources, 21 Nov 2026 03:55 UTC: Reuters, AP, IANS, "
+                "NASA, ESA, USGS / Peru IGP, JTWC. "
                 "30 stories. One image, one day.")
         pen.text((EDGE, y + 6), foot, font=set_.font(SANS, 9),
                  fill=SOFT_INK)
