@@ -98,8 +98,8 @@ GRID_ITEMS = [
      "The coalition said it downed three missiles aimed at the capital on Saturday, the second attack in days."),
     ("CLIMATE", "Antalya", "COP31 talks run past the deadline",
      "Talks ran into overtime on a third draft after fossil-fuel wording was cut; Panama threatened a veto."),
-    ("FRANCE", "Paris", "Fourth weekend of cost-of-living protests",
-     "Some 146,000 marched across France, 46,000 in Paris, as price protests entered a fourth weekend."),
+    ("FRANCE", "Paris", "Sixth Saturday of cost-of-living protests",
+     "Paris march approved for 2pm from République to Nation, with about 70,000 police deployed nationwide."),
     ("SPACE", "Vandenberg", "SpaceX tries again to fly USSF-317",
      "Thursday's launch was scrubbed; the classified Space Force mission is now set for 04:20 UTC on Saturday."),
     ("SPACE", "California", "Dragon splashes down off California",
@@ -152,7 +152,7 @@ STAT_CELLS = [
     ("6.8", "Peru quake magnitude"),
     ("-5.28%", "Nasdaq, Friday"),
     ("$1.91bn", "crypto bets wiped out"),
-    ("146,000", "march in France"),
+    ("70,000", "police on duty"),
 ]
 
 # Numbered pins on the schematic map: (x, y, number, label).
